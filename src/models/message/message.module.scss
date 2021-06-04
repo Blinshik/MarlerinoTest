@@ -1,0 +1,42 @@
+.wrapper {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.container {
+    position: relative;
+    flex-grow: 0;
+    max-width: 100%;
+
+    &__content {
+        padding: 11px 12px 11px 16px;
+        
+        &__name {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 120%;
+            color: #3454D1;
+        }
+
+        &__message {
+            display: flex;
+
+            &__text {
+                white-space: normal;
+                font-size: 16px;
+                line-height: 125%;
+                margin: 0px 8px;
+                width: 100%;
+            }
+
+            &__date {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                font-size: 12px;
+                line-height: 125%;
+            }
+        }
+    }
+}

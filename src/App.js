@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import ChatHeader from './models/chatHeader'
+import RequestList from './models/requestList'
+import UserChat from './models/userChat'
+import { useSelector } from 'react-redux'
 
 function App() {
+  const request = useSelector((state) => state.requests.active)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{ height: '100vh' }}>
+      <ChatHeader />
+      {
+        request.position === -1 ? 
+          <RequestList /> : 
+          <UserChat position={request.position} />
+      }
     </div>
   );
 }

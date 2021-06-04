@@ -1,0 +1,23 @@
+.container {
+    border-radius: 16px;
+    margin-bottom: 8px;
+    position: relative;
+    overflow: hidden; 
+
+    &__hover {
+        background: #3454D1;
+        box-shadow: 0px 0px 24px 4px #3454D1;
+        border-radius: 0px 4px 4px 0px;
+        position: absolute;
+        left: 0;
+        width: 4px;
+        height: 40px;
+        top: calc(50% - 40px/2);
+    }
+
+    &__wrapper {
+        padding: 16px 0 16px 24px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
