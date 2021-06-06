@@ -27,7 +27,18 @@ export default function Message({msg}) {
                             {msg.text}
                         </div>
                         <div className={styles.container__content__message__date}>
-                            {msg.time}
+                            <div
+                                style={{ 
+                                    color: msg.userMsg ? '#DDDBDC' : '#C4C2C4',
+                                    marginRight: '7px'
+                                }}
+                            >{msg.time}</div>
+                            <div
+                                style={{ 
+                                    color: msg.userMsg ? '#DDDBDC' : '#C4C2C4',
+                                    display: msg.view ? 'block' : 'none'
+                                }}
+                            >+</div>
                         </div>
                     </div>
                 </div>

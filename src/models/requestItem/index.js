@@ -36,13 +36,14 @@ export default function RequestItem({request}) {
                 style={{ display: isHover ? 'block' : 'none' }}
             ></div>
             <div className={styles.container__wrapper}>
-                <div>
-                    <div >{request.title}</div>
+                <div className={styles.container__wrapper__text}>
+                    <div className={styles.container__wrapper__text__title}>{request.title}</div>
                     <div>
-                        <span>{request.place}</span>
-                        <span>{request.date}</span>
+                        <span className={styles.container__wrapper__text__infoPlace}>{request.place}</span>
+                        <span className={styles.container__wrapper__text__infoDate}>{request.date}</span>
                     </div>
                 </div>
+                <div className={styles.container__wrapper__img}>X</div>
             </div>
         </div>
     )

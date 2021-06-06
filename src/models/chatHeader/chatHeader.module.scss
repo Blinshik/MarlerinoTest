@@ -6,11 +6,16 @@
 
     &__menu {
         color: rgba(111, 111, 114, 1);
+        margin-right: 26px;
+        flex-grow: 0;
+        cursor: pointer;
     }
 
     &__line {
         height: 40px;
         border: 1px solid rgba(196, 194, 196, 1);
+        flex-grow: 0;
+        margin-right: 24px;
     }
 
     &__avatar {
@@ -18,13 +23,18 @@
         height: 56px;
         border-radius: 16px;
         background-color: black;
+        margin-right: 24px;
+        flex-grow: 0;
     }
 
     &__greetings {
         color: black;
+        flex-grow: 1;
+        overflow: hidden;
 
         &__user {
             margin: 0;
+            white-space: nowrap;
         }
     }
 }
