@@ -24,6 +24,13 @@ export default function Message({msg}) {
                             className={styles.container__content__message__text}
                             style={{ color: msg.userMsg ? '#F6F4F5' : '#121417' }}
                         >
+                            <div
+                                style={{ 
+                                    display: msg.img ? 'block' : 'none',
+                                    background: `center / contain no-repeat url(${msg.img}) `
+                                }}
+                                className={styles.container__content__message__text__img}
+                            ></div>
                             {msg.text}
                         </div>
                         <div className={styles.container__content__message__date}>

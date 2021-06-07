@@ -121,13 +121,17 @@ export const messagesStore = createSlice({
                 ]
             }
         ],
+        img: '',
     },
     reducers: {
         addMsg: (state, action) => {
             state.userChats[action.payload.position].messages.push(action.payload.newMsg)
+        },
+        setImg: (state, action) => {
+            state.img = action.payload
         }
     }
 })
 
-export const { addMsg } = messagesStore.actions
+export const { addMsg, setImg } = messagesStore.actions
 export default messagesStore.reducer

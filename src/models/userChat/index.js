@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from './userChat.module.scss'
-import { addMsg } from '../../redux/messages'
+import { addMsg, setImg } from '../../redux/messages'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../message' 
 import PopUp from '../popUp'
@@ -8,15 +8,14 @@ import PopUp from '../popUp'
 export default function UserChat({position}) {
     const dispatch = useDispatch();
     const messages =  useSelector(state => state.messages.userChats[position].messages)
+    const img = useSelector(state => state.messages.img)
     const [text, setText] = useState('')
     const [open, setOpen] = useState(false)
-    // const [imagePreviewUrl, setImagePreviewUrl] = useState('')
-    // const [file, setFile] = useState('')
 
     const dateTime = new Date()
 
     const sendHandler = () => {
-        if(text) {
+        if(text || img) {
             let hour = dateTime.getHours();
             let minute = dateTime.getMinutes();
             if(minute < 10) {
@@ -28,12 +27,15 @@ export default function UserChat({position}) {
                     time: `${hour}.${minute}`,
                     view: false,
                     userMsg: true,
+                    img: img,
                 },
                 position: position
             }))
             setText('');
+            dispatch(setImg(''))
         }else {
             alert('Пустое сообщение');
+            console.log(img);
         }
     };
 
@@ -44,26 +46,6 @@ export default function UserChat({position}) {
     const openHandler = () => {
         setOpen(true)
     }
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     // TODO: do something with -> this.state.file
-    //     //console.log('handle uploading-', this.state.file);
-    //   }
-
-    //   const handleImageChange = (e) => {
-    //     e.preventDefault();
-    
-    //     let reader = new FileReader();
-    //     let file = e.target.files[0];
-    
-    //     reader.onloadend = () => {
-    //         setFile(file)
-    //         setImagePreviewUrl(reader.result)
-    //     }
-    
-    //     reader.readAsDataURL(file)
-    //   }
 
     return (
         <div className={styles.container}>
@@ -98,14 +80,6 @@ export default function UserChat({position}) {
                     className={styles.container__form__enter}
                 >Send</button>
             </div>
-            {/* <form onSubmit={handleSubmit}>
-          <input className="fileInput" 
-            type="file" 
-            onChange={handleImageChange} />
-          <button className="submitButton" 
-            type="submit" 
-            onClick={handleSubmit}>Upload Image</button>
-        </form> */}
         </div>
     )
 }
