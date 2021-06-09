@@ -73,12 +73,20 @@ export default function UserChat({position}) {
                     <button 
                         className={styles.container__form__input__add}
                         onClick={openHandler}
-                    >Add</button>
+                    >
+                        <span class="material-icons">
+                            attach_file
+                        </span>
+                    </button>
                 </div>
                 <button
                     onClick={sendHandler}
                     className={styles.container__form__enter}
-                >Send</button>
+                >
+                    <span class="material-icons">
+                        north
+                    </span>
+                </button>
             </div>
         </div>
     )

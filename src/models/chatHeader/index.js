@@ -19,7 +19,11 @@ export default function ChatHeader() {
     if(request.position === -1) {
         return (
             <div className={styles.container}>
-                <div className={styles.container__menu}>\\\</div>
+                <div className={styles.container__menu}>
+                    <span className={"material-icons"}>
+                        list
+                    </span>
+                </div>
                 <div className={styles.container__line}></div>
                 <div className={styles.container__avatar}></div>
                 <div className={styles.container__greetings}>
@@ -34,7 +38,11 @@ export default function ChatHeader() {
                 <div 
                     className={styles.container__menu}
                     onClick={clickHandler}
-                >Back</div>
+                >
+                    <span className={"material-icons"}>
+                        west
+                    </span>
+                </div>
                 <div className={styles.container__line}></div>
                 <div className={styles.container__greetings}>
                     <h3 className={styles.container__greetings__user}>{request.title}</h3> 

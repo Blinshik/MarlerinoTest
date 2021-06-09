@@ -45,7 +45,14 @@ export default function Message({msg}) {
                                     color: msg.userMsg ? '#DDDBDC' : '#C4C2C4',
                                     display: msg.view ? 'block' : 'none'
                                 }}
-                            >+</div>
+                            >
+                                <span 
+                                    class="material-icons"
+                                    style={{ fontSize: '12px' }}
+                                >
+                                    done
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>

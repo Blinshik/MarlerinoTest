@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from 'react'
 import styles from './popUp.module.scss'
 import { setImg } from '../../redux/messages'
