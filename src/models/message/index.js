@@ -47,7 +47,7 @@ export default function Message({msg}) {
                                 }}
                             >
                                 <span 
-                                    class="material-icons"
+                                    className={"material-icons"}
                                     style={{ fontSize: '12px' }}
                                 >
                                     done

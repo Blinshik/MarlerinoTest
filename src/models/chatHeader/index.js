@@ -27,7 +27,7 @@ export default function ChatHeader() {
                 <div className={styles.container__line}></div>
                 <div className={styles.container__avatar}></div>
                 <div className={styles.container__greetings}>
-                    <div>Здравствуйте,</div>
+                    <div className={styles.container__greetings__start}>Здравствуйте,</div>
                     <h2 className={styles.container__greetings__user}>UserName</h2>
                 </div>
             </div>

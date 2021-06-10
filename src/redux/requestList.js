@@ -9,28 +9,32 @@ export const requestListStore = createSlice({
                 place: 'Офис 2109',
                 date: '• 21.02.2021 12:19',
                 position: 0,
-                isClicked: false
+                isClicked: false,
+                img: 'help_outline'
             },
             {
                 title: 'Сломалась кнопка на входе в офис',
                 place: 'Офис 2109',
                 date: '• 21.02.2021 12:19',
                 position: 1,
-                isClicked: false
+                isClicked: false,
+                img: 'done'
             },
             {
                 title: 'Надо заменить розетку',
                 place: 'Офис 2109',
                 date: '• 21.02.2021 12:19',
                 position: 2,
-                isClicked: false
+                isClicked: false,
+                img: 'timer'
             },
             {
                 title: 'Не работает интернет',
                 place: 'Офис 2109',
                 date: '• 21.02.2021 12:19',
                 position: 3,
-                isClicked: false
+                isClicked: false,
+                img: 'close'
             }
         ],
         active: {

@@ -46,6 +46,13 @@
                 display: flex;
                 align-items: center;
                 flex-grow: 1;
+                outline: none;
+                &::-webkit-input-placeholder {
+                    font-family: 'Roboto Condensed', sans-serif;
+                    font-size: 14px;
+                    line-height: 125%;
+                    color: #C4C2C4;
+                }
             }
 
             &__add {
@@ -70,3 +77,4 @@
         }
     }
 }
+

@@ -74,7 +74,7 @@ export default function UserChat({position}) {
                         className={styles.container__form__input__add}
                         onClick={openHandler}
                     >
-                        <span class="material-icons">
+                        <span class="material-icons" style={{ color: "#C4C2C4" }}>
                             attach_file
                         </span>
                     </button>
@@ -83,7 +83,7 @@ export default function UserChat({position}) {
                     onClick={sendHandler}
                     className={styles.container__form__enter}
                 >
-                    <span class="material-icons">
+                    <span class="material-icons" style={{ color: "#F6F4F5" }}>
                         north
                     </span>
                 </button>
